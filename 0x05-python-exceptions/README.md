@@ -1,0 +1,1 @@
+This readme is exempted from trying.
