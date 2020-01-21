@@ -1,7 +1,7 @@
 """ This is a series of sample tests to ensure that file 1-my_list.py doesn't implode
 """
 
-    >>> my_list = __import__('1-my_list').my_list
+    >>> MyList = __import__('1-my_list').MyList
 
     >>> my_list = MyList()
 
@@ -14,13 +14,9 @@
     [1]
 
     >>> my_list.append(525600)
-
     >>> my_list.append(42)
-
     >>> my_list.append(255)
-
     >>> my_list.append(32767)
-
     >>> my_list.print_sorted()
     [1, 42, 255, 32767, 525600]
 

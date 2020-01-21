@@ -1,22 +1,25 @@
-""" This is a series of sample tests to ensure that file 7-base_geometry.py doesn't implode
+"""
+This is a series of sample tests to ensure that file 7-base_geometry.py doesn't implode
 """
 
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("this_variable", 85)
 
     >>> bg.integer_validator("Roselia", Ako)
     Traceback (most recent call last):
     ...
-    [TypeError] Roselia must be an integer
+    NameError: name 'Ako' is not defined
 
     >>> bg.integer_validator("Kiseki", 0)
     Traceback (most recent call last):
     ...
-    [ValueError] Kiseki must be greater than 0
+    ValueError: Kiseki must be greater than 0
 
-    >>> bg.integer_validator("Christine", -2)
+    >>> bg.integer_validator("Aliasse", -2)
     Traceback (most recent call last):
     ...
-    [ValueError] Christine must be greater than 0
+    ValueError: Aliasse must be greater than 0
 
     >>> bg.integer_validator("9", 9)
 
