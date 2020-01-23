@@ -60,4 +60,5 @@ class Rectangle(Base):
             print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
-        return ("[{}] ({}) {}/{} - {}/{}".format("Rectangle", self.id, self.__x, self.__y, self.__width, self.__height))
+        return ("[{}] ({}) {}/{} - {}/{}".format("Rectangle",
+                self.id, self.__x, self.__y, self.__width, self.__height))
