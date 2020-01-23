@@ -9,10 +9,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """ Initialization """
         super().__init__(id)
-        Rectangle.set_width(self, width)
-        Rectangle.set_height(self, height)
-        Rectangle.set_x(self, x)
-        Rectangle.set_y(self, y)
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def get_width(self):
