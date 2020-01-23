@@ -87,7 +87,8 @@ class Rectangle(Base):
                 self.id, self.__x, self.__y, self.__width, self.__height))
 
     def update(self, *args, **kwargs):
-        """ Update function. Allows for changing values and supports *args and **kwargs """
+        """ Update function. Allows for changing values and
+        supports *args and **kwargs """
         length = len(args)
         if length is not 0:
             for num in range(length):
@@ -115,7 +116,8 @@ class Rectangle(Base):
                     self.__y = value
 
     def to_dictionary(self):
-        """ Dictionary function. Allows setting of parameters into a convenient dictionary """
+        """ Dictionary function. Allows setting of parameters
+        into a convenient dictionary """
         rec_dict = {'x': 0, 'y': 0, 'id': 0, 'height': 0, 'width': 0}
         rec_dict['x'] = self.__x
         rec_dict['y'] = self.__y
