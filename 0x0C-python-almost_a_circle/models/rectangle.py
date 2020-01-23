@@ -115,6 +115,7 @@ class Rectangle(Base):
                     self.__y = value
 
     def to_dictionary(self):
+        """ Dictionary function. Allows setting of parameters into a convenient dictionary """
         rec_dict = {'x': 0, 'y': 0, 'id': 0, 'height': 0, 'width': 0}
         rec_dict['x'] = self.__x
         rec_dict['y'] = self.__y
