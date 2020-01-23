@@ -35,7 +35,8 @@ class Square(Rectangle):
         self.height = self.width
 
     def update(self, *args, **kwargs):
-        """ Update function. Allows for changing values and supports *args and **kwargs """
+        """ Update function. Allows for changing values
+        and supports *args and **kwargs """
         length = len(args)
         if length is not 0:
             for num in range(length):
@@ -57,3 +58,13 @@ class Square(Rectangle):
                     self.x = value
                 elif key in "y":
                     self.y = value
+
+    def to_dictionary(self):
+        """ Dictionary function. Allows setting of parameters
+        into a convenient dictionary """
+        sq_dict = {'id': 0, 'size': 0, 'x': 0, 'y': 0}
+        sq_dict['id'] = self.id
+        sq_dict['size'] = self.width
+        sq_dict['x'] = self.x
+        sq_dict['y'] = self.y
+        return sq_dict
