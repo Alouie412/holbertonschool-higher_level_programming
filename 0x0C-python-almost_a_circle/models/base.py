@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Importing json for json-related tasks """
+import json
 """ Base.py """
 
 
@@ -13,3 +15,7 @@ class Base():
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """ Converting dictionaries to json strings """
+        return json.dumps(list_dictionaries)
