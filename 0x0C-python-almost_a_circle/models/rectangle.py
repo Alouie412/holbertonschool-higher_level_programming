@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" rectangle.py """
-""" File that handles anything related to the rectangle class """
+
 """ This file imports the code found in /models/base.py """
 from models.base import Base
+""" rectangle.py """
 
 
 class Rectangle(Base):
@@ -88,8 +88,7 @@ class Rectangle(Base):
                 self.id, self.__x, self.__y, self.__width, self.__height))
 
     def update(self, *args, **kwargs):
-        """ Update function. Allows for changing values """
-        """ Supports input in tuple (*arg) or dictionary (**kwarg) format """
+        """ Update function. Allows for changing values and supports *args and **kwargs """
         length = len(args)
         if length is not 0:
             print("In args")
