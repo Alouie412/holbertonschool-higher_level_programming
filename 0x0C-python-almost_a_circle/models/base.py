@@ -21,3 +21,9 @@ class Base():
         if list_dictionaries is None or len(list_dictionaries) is 0:
             return ("[]")
         return json.dumps(list_dictionaries)
+
+    def from_json_string(json_string):
+        """ Converting json strings to lists """
+        if json_string is None or len(json_string) is 0:
+            return ("[]")
+        return json.loads(json_string)
