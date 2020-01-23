@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-
 """ This file imports the code found in /models/base.py """
 from models.base import Base
-""" rectangle.py """
+""" Rectangle class """
 
 
 class Rectangle(Base):
@@ -20,7 +19,7 @@ class Rectangle(Base):
         """ Width getter function """
         return self.__width
 
-    @width.setter
+    @get_width.setter
     def set_width(self, value):
         """ Width setter function """
         if type(value) is not int:
@@ -34,7 +33,7 @@ class Rectangle(Base):
         """ Height getter function """
         return self.__height
 
-    @height.setter
+    @get_height.setter
     def set_height(self, value):
         """ Height setter function """
         if type(value) is not int:
@@ -48,7 +47,7 @@ class Rectangle(Base):
         """ X getter function """
         return self.__x
 
-    @x.setter
+    @get_x.setter
     def set_x(self, value):
         """ X setter function """
         if type(value) is not int:
@@ -62,7 +61,7 @@ class Rectangle(Base):
         """ Y getter function """
         return self.__y
 
-    @y.setter
+    @get_y.setter
     def set_y(self, value):
         """ Y setter function """
         if type(value) is not int:
