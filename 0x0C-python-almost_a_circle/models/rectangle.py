@@ -91,7 +91,6 @@ class Rectangle(Base):
         """ Update function. Allows for changing values and supports *args and **kwargs """
         length = len(args)
         if length is not 0:
-            print("In args")
             for num in range(length):
                 if num is 0:
                     self.id = args[0]
@@ -104,7 +103,6 @@ class Rectangle(Base):
                 elif num is 4:
                     self.__y = args[4]
         else:
-            print("In kwargs")
             for key, value in kwargs.items():
                 if key in "id":
                     self.id = value
