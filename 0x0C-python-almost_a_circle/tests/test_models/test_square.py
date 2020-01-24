@@ -24,26 +24,25 @@ class SquareTesting(unittest.TestCase):
         self.assertEqual(sq.height, 5)
         self.assertEqual(sq.x, 0)
         self.assertEqual(sq.y, 0)
-        self.assertEqual(sq.id, 1)
-        sq = Square(9, 2, 5, 99)
-        self.assertEqual(sq.width, 9)
-        self.assertEqual(sq.height, 9)
-        self.assertEqual(sq.x, 2)
-        self.assertEqual(sq.y, 5)
-        self.assertEqual(sq.id, 99)
+        sq2 = Square(9, 2, 5, 99)
+        self.assertEqual(sq2.width, 9)
+        self.assertEqual(sq2.height, 9)
+        self.assertEqual(sq2.x, 2)
+        self.assertEqual(sq2.y, 5)
+        self.assertEqual(sq2.id, 99)
 
     def test_area(self):
         """ Test for valid area calculation """
         sq = Square(7)
         self.assertEqual(sq.area(), 49)
-        sq = Square(20, 2, 4, 8)
-        self.assertEqual(sq.area(), 400)
+        sq2 = Square(20, 2, 4, 8)
+        self.assertEqual(sq2.area(), 400)
 
     def text(self):
         """ Test for proper text display and correct modification """
         sq = Square(1, 2, 3, 4)
-        line = "[Square] ({}) {}/{} - {}"
-        .format(sq.id, sq.x, sq.y, sq.size)
+        line = "[Square] ({}) {}/{} - {}".format(
+                sq.id, sq.x, sq.y, sq.size)
         self.assertEqual(str(sq), line)
         sq.update(9)
         self.assertEqual(str(sq), line)

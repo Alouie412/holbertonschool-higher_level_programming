@@ -19,12 +19,12 @@ class RectangleTesting(unittest.TestCase):
     def test_rec(self):
         """ Test for valid rectangle """
         rec = Rectangle(1, 5)
-        self.assertEqual(type(r.width), int)
-        self.assertEqual(type(r.height), int)
-        self.assertEqual((rec.width, rec.height, rec.x, rec.y, id),
+        self.assertEqual(type(rec.width), int)
+        self.assertEqual(type(rec.height), int)
+        self.assertEqual((rec.width, rec.height, rec.x, rec.y, rec.id),
                          (1, 5, 0, 0, 1))
         rec = Rectangle(3, 3, 1)
-        self.assertEqual((rec.width, rec.height, rec.x, rec.y, id),
+        self.assertEqual((rec.width, rec.height, rec.x, rec.y, rec.id),
                         (3, 3, 1, 0, 2))
         with self.assertRaises(TypeError):
             rec = Rectangle("Potato", 1)
@@ -41,16 +41,16 @@ class RectangleTesting(unittest.TestCase):
     def display_rec_info(self):
         """ Test for proper text display """
         rec = Rectangle(3, 2, 7, 6, 7)
-        line = "[Rectangle] ({}) {}/{} - {}/{}"
-        .format(rec.id, rec.x, rec.y, rec.width, rec.height)
+        line = "[Rectangle] ({}) {}/{} - {}/{}".format(
+                rec.id, rec.x, rec.y, rec.width, rec.height)
         self.assertEqual(str(rec), line)
 
     def updater(self):
         """ Test for correct modification to rectangle stats """
         rec = Rectangle(1, 1, 1, 1)
         rec.update(5)
-        line = "[Rectangle] ({}) {}/{} - {}/{}"
-        .format(rec.id, rec.x, rec.y, rec.width, rec.height)
+        line = "[Rectangle] ({}) {}/{} - {}/{}".format(
+                rec.id, rec.x, rec.y, rec.width, rec.height)
         self.assertEqual(str(rec), line)
         rec.update(5, 2, 2)
         self.assertEqual(str(rec), line)
