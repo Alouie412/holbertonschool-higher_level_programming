@@ -38,18 +38,24 @@ class SquareTesting(unittest.TestCase):
         sq2 = Square(20, 2, 4, 8)
         self.assertEqual(sq2.area(), 400)
 
-    def text(self):
-        """ Test for proper text display and correct modification """
-        sq = Square(1, 2, 3, 4)
-        line = "[Square] ({}) {}/{} - {}".format(
+    def test_text(self):
+        """Tests representation"""
+        sq = Square(9, 7, 8, 2)
+        sq_line = "[Square] ({}) {}/{} - {}".format(
                 sq.id, sq.x, sq.y, sq.size)
-        self.assertEqual(str(sq), line)
-        sq.update(9)
-        self.assertEqual(str(sq), line)
-        sq.update(9, 5)
-        self.assertEqual(str(sq), line)
-        sq.update(size=4, x=8)
-        self.assertEqual(str(sq), line)
+        self.assertEqual(str(sq), sq_line)
+        sq.update(77)
+        sq_line = "[Square] ({}) {}/{} - {}".format(
+                sq.id, sq.x, sq.y, sq.size)
+        self.assertEqual(str(sq), sq_line)
+        sq.update(77, 5, 1)
+        sq_line = "[Square] ({}) {}/{} - {}".format(
+                sq.id, sq.x, sq.y, sq.size)
+        self.assertEqual(str(sq), sq_line)
+        sq.update(id=325, x=7)
+        sq_line = "[Square] ({}) {}/{} - {}".format(
+                sq.id, sq.x, sq.y, sq.size)
+        self.assertEqual(str(sq), sq_line)
 
 if __name__ == '__main__':
     unittest.main()

@@ -38,27 +38,24 @@ class RectangleTesting(unittest.TestCase):
         rec = Rectangle(6, 11, 2, 7, 32767)
         self.assertEqual(rec.area(), 66)
 
-    def display_rec_info(self):
-        """ Test for proper text display """
-        rec = Rectangle(3, 2, 7, 6, 7)
-        line = "[Rectangle] ({}) {}/{} - {}/{}".format(
+    def test_text(self):
+        """Tests for correct syntax """
+        rec = Rectangle(9, 7, 8, 2, 5)
+        rec_line = "[Rectangle] ({}) {}/{} - {}/{}".format(
                 rec.id, rec.x, rec.y, rec.width, rec.height)
-        self.assertEqual(str(rec), line)
-
-    def updater(self):
-        """ Test for correct modification to rectangle stats """
-        rec = Rectangle(1, 1, 1, 1)
-        rec.update(5)
-        line = "[Rectangle] ({}) {}/{} - {}/{}".format(
+        self.assertEqual(str(rec), rec_line)
+        rec.update(77)
+        rec_line = "[Rectangle] ({}) {}/{} - {}/{}".format(
                 rec.id, rec.x, rec.y, rec.width, rec.height)
-        self.assertEqual(str(rec), line)
-        rec.update(5, 2, 2)
-        self.assertEqual(str(rec), line)
-        rec = Rectangle(1, 1, 1, 1)
-        rec.update(height=5)
-        self.assertEqual(str(rec), line)
-        rec.update(x=6, width=7, id=999)
-        self.assertEqual(str(rec), line)
+        self.assertEqual(str(rec), rec_line)
+        rec.update(55, 6, 1)
+        rec_line = "[Rectangle] ({}) {}/{} - {}/{}".format(
+                rec.id, rec.x, rec.y, rec.width, rec.height)
+        self.assertEqual(str(rec), rec_line)
+        rec.update(id=9853, width=10, y=0)
+        rec_line = "[Rectangle] ({}) {}/{} - {}/{}".format(
+                rec.id, rec.x, rec.y, rec.width, rec.height)
+        self.assertEqual(str(rec), rec_line)
 
 
 if __name__ == '__main__':
