@@ -27,9 +27,3 @@ class Base():
         if json_string is None or len(json_string) is 0:
             return ("[]")
         return json.loads(json_string)
-
-    def dummy_rec(self, id, width, height, x, y):
-        Rectangle.update(self, *args, **dictionary)
-
-    def dummy_sq(self, id, size, x, y):
-        Square.update(self, *args, **dictionary)
