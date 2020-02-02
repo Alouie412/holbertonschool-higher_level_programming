@@ -1,0 +1,18 @@
+''' Test file for creating newlines after certain characters '''
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("This is a string. This is also a string. This may be a string.")
+    This is a string.
+
+    This is also a string.
+
+    This may be a string.
+
+    >>> text_indentation("This is probably a string")
+    This is probably a string>>>
+    >>> text_indentation(25)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+    >>> text_indentation("25")
+    25>>>

@@ -1,0 +1,22 @@
+''' Test file for printing full names '''
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+    >>> say_my_name("Aliasse", "Fryxell")
+    My name is Aliasse Fryxell
+    >>> say_my_name("Platinum")
+    My name is Platinum
+    >>> say_my_name(42)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+    >>> say_my_name("Estelle", 0)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+    >>> say_my_name(None, "A")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+    >>> say_my_name("a", "secret")
+    My name is a secret

@@ -1,0 +1,28 @@
+''' Test file for adding integers '''
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+    >>> add_integer(5)
+    103
+    >>> add_integer("Potato")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+    >>> add_integer(42, "Daikon")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+    >>> add_integer("z", 78)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+    >>> add_integer(102, -853)
+    -751
+    >>> add_integer(94.7, 221)
+    315
+    >>> add_integer(0, 2)
+    2
+    >>> add_integer('', '')
+    Traceback (most recent call last):
+    ...
+    Typeerror: a must be an integer
