@@ -25,4 +25,4 @@
     >>> add_integer('', '')
     Traceback (most recent call last):
     ...
-    Typeerror: a must be an integer
+    TypeError: a must be an integer
