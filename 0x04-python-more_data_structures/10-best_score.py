@@ -3,7 +3,7 @@ def best_score(a_dictionary):
     best_score = 0
     best_name = ""
 
-    if a_dictionary is None or str(a_dictionary) is not False:
+    if a_dictionary is None or not a_dictionary:
         return None
 
     for key, value in a_dictionary.items():
