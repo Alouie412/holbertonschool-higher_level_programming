@@ -5,7 +5,7 @@
     >>> say_my_name("Aliasse", "Fryxell")
     My name is Aliasse Fryxell
     >>> say_my_name("Platinum")
-    My name is Platinum
+    My name is Platinum 
     >>> say_my_name(42)
     Traceback (most recent call last):
     ...
