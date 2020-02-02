@@ -23,4 +23,4 @@
     >>> say_my_name()
     Traceback (most recent call last):
     ...
-    TypeError: first_name must be a string
+    TypeError: say_my_name() requiring 1 positional argument: 'first_name'
