@@ -5,7 +5,7 @@ def add_integer(a, b=98):
     else:
         raise TypeError("a must be an integer")
 
-    if type(b) is int or type(b) is float or b is Nan:
+    if type(b) is int or type(b) is float or b is NaN:
         b = int(b)
     else:
         raise TypeError("b must be an integer")
