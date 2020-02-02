@@ -20,3 +20,7 @@
     TypeError: first_name must be a string
     >>> say_my_name("a", "secret")
     My name is a secret
+    >>> say_my_name()
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
