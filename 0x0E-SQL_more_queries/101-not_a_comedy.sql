@@ -10,4 +10,4 @@ WHERE NOT tv_shows.id IN
     LEFT JOIN tv_genres ON tv_show_genres.genre_id = tv_genres.id
     WHERE tv_genres.name = 'Comedy'
 )
-ORDER by tv_shows.title ASC;
+ORDER BY tv_shows.title ASC;
