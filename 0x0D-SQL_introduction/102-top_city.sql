@@ -1,7 +1,9 @@
--- This script takes the average temperature of all cities, the lists the top 3 in descending order
+-- This script takes the average temperature of all cities only within a certain month timeframe,
+-- then lists the top three in descending order
 
-SELECT city, AVG('value') AS avg_temp
+SELECT city, AVG(temperatures.value) AS avg_temp
 FROM temperatures
-WHERE month = 7 AND month = 8
-ORDER BY AVG DESC
+WHERE month = 7 OR month = 8
+GROUP BY city
+ORDER BY avg_temp DESC
 LIMIT 3;
