@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-
+""" Importing """
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
+""" 8-model_state_fetch_first.py """
 
 
 def listStateObj():
@@ -20,7 +21,7 @@ def listStateObj():
     my_session = Session()
 
     first_state = my_session.query(State).first()
-    if first_state == None:
+    if first_state is None:
         print("Nothing")
     else:
         print("{}: {}".format(first_state.id, first_state.name))
