@@ -4,7 +4,7 @@ import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
-""" 8-model_state_fetch_first.py """
+""" 9-model_state_filter_a.py """
 
 
 def listStateObj():
