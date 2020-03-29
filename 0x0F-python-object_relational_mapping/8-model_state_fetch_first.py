@@ -3,6 +3,7 @@
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
+from sqlalchemy.orm import sessionmaker
 
 
 def listStateObj():
@@ -19,10 +20,10 @@ def listStateObj():
     my_session = Session()
 
     first_state = my_session.query(State).first()
-    if first_state is None:
+    if first_state == None:
         print("Nothing")
     else:
-        print("{}: {}".format(state.id, state.name))
+        print("{}: {}".format(first_state.id, first_state.name))
 
     my_session.close()
 
