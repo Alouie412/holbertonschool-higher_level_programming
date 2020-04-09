@@ -28,9 +28,9 @@ def find_peak(list_of_integers):
             # the result can differ. However, what is important is that
             # we correctly move the beginning or ending pointer depending on
             # the if statement
-            # We will check the left side first. Editing the code to check
-            # the right side first is a trivial matter
-            if cpy[mid] < cpy[mid - 1]:
-                end = mid
-            elif cpy[mid] < cpy[mid + 1]:
+            # We will check the right side first. Editing the code to check
+            # the left side first is a trivial matter
+            if cpy[mid] < cpy[mid + 1]:
                 begin = mid
+            elif cpy[mid] < cpy[mid - 1]:
+                end = mid
