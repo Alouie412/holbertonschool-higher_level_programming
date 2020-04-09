@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # This script takes the given URL and sends a GET request, while also feeding it the header
 # variable to a specific port
 
