@@ -16,7 +16,7 @@ def find_peak(list_of_integers):
     if begin >= end:
         return None
 
-    for i in range(0, 5):
+    while begin <= end:
         mid = int(((end - begin) / 2) + begin)
         if cpy[mid] > cpy[mid - 1] and cpy[mid] > cpy[mid + 1]:
             return cpy[mid]
@@ -33,5 +33,3 @@ def find_peak(list_of_integers):
                 end = mid
             elif cpy[mid] < cpy[mid + 1]:
                 begin = mid
-
-    return cpy[mid]
