@@ -7,6 +7,7 @@ more than 1 possible result. Ex. given a list [4, 2, 1, 2, 3, 1],
 4 and 3 are valid answers
 """
 
+
 def find_peak(list_of_integers):
     """ Find dat peak """
     cpy = list_of_integers
