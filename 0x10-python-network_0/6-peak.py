@@ -30,7 +30,9 @@ def find_peak(list_of_integers):
             # the if statement
             # We will check the right side first. Editing the code to check
             # the left side first is a trivial matter
-            if cpy[mid] < cpy[mid + 1]:
-                begin = mid
-            elif cpy[mid] < cpy[mid - 1]:
-                end = mid
+            if cpy[mid] <= cpy[mid + 1]:
+                begin = mid + 1
+            elif cpy[mid] <= cpy[mid - 1]:
+                end = mid - 1
+
+    return cpy[begin]
