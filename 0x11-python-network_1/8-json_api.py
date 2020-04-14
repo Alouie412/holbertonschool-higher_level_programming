@@ -14,7 +14,7 @@ def search_api():
         q = sys.argv[1]
 
     new_dict = {'q': q}
-    req = requests.post("http://0.0.0.0:5000/search_user", q)
+    req = requests.post("http://0.0.0.0:5000/search_user", new_dict)
 
     try:
         user = req.json()
