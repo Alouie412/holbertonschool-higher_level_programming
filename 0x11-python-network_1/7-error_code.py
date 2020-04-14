@@ -8,7 +8,7 @@ import sys
 
 def error():
     req = requests.get(sys.argv[1])
-    if r.status_code >= 400:
+    if req.status_code >= 400:
         print("Error code: {}".format(req.status_code))
     else:
         print(req.text)
