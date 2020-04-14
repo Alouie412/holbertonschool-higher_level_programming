@@ -14,7 +14,7 @@ def error():
             print(msg.read().decode('utf-8'))
     except urllib.error.HTTPError as err:
         #print("Error code: {}".format(err.read().decode('utf-8')))
-        print("Error code: {}".format(err.getcode()))
+        print("Error code: {}".format(err.code))
 
 
 if __name__ == '__main__':
