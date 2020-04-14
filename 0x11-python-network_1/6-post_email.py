@@ -9,7 +9,7 @@ import sys
 
 def post_email():
     new_dict = {'email': sys.argv[2]}
-    req = requests.post(argv[1], new_dict)
+    req = requests.post(sys.argv[1], new_dict)
     print(req.text)
 
 
