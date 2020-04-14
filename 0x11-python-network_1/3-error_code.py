@@ -7,7 +7,7 @@ import urllib.request
 import sys
 
 
-def error():
+if __name__ == '__main__':
     req = urllib.request.Request(sys.argv[1])
     try:
         with urllib.request.urlopen(req) as msg:
@@ -15,7 +15,3 @@ def error():
     except urllib.error.HTTPError as err:
         #print("Error code: {}".format(err.read().decode('utf-8')))
         print("Error code: {}".format(err.code))
-
-
-if __name__ == '__main__':
-    error()
