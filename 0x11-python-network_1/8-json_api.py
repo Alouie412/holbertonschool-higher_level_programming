@@ -10,7 +10,7 @@ import sys
 def search_api():
     if len(argv) == 1:
         q = ""
-    else
+    else:
         q = sys.argv[1]
 
     new_dict = {'q': q}
