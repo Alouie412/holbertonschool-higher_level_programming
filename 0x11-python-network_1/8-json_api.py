@@ -8,7 +8,7 @@ import sys
 
 
 def search_api():
-    if len(argv) == 1:
+    if len(sys.argv) == 1:
         q = ""
     else:
         q = sys.argv[1]
@@ -18,7 +18,7 @@ def search_api():
 
     try:
         user = req.json()
-        if user is not None:
+        if user:
             print("[{}] {}".format(user.get('id'), user.get('name')))
         else:
             print("No result")
