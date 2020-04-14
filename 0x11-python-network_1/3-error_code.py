@@ -8,8 +8,8 @@ import sys
 
 
 def error():
+    req = urllib.request.Request(sys.argv[1])
     try:
-        req = urllib.request.Request(sys.argv[1])
         with urllib.request.urlopen(req) as msg:
             print(msg.read().decode('utf-8'))
     except urllib.error.HTTPError as err:
