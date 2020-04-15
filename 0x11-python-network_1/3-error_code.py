@@ -13,7 +13,7 @@ def error():
         with urllib.request.urlopen(req) as msg:
             print(msg.read().decode('utf-8'))
     except urllib.error.HTTPError as err:
-        #print("Error code: {}".format(err.read().decode('utf-8')))
+        # print("Error code: {}".format(err.read().decode('utf-8')))
         print("Error code: {}".format(err.code))
 
 if __name__ == '__main__':

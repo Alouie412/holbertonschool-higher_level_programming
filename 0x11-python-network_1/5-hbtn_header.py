@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" Get the X-Request-ID of the passed in website argument. Requests version """
+"""
+Get the X-Request-ID of the passed in website argument.
+Requests version
+"""
 import requests
 import sys
 

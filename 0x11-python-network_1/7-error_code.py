@@ -6,6 +6,7 @@ If it fails for whatever reason, display the status code. Requests version
 import requests
 import sys
 
+
 def error():
     req = requests.get(sys.argv[1])
     if req.status_code >= 400:
