@@ -1,0 +1,1 @@
+This readme enjoys a cup of javascript every day.
