@@ -12,8 +12,6 @@ if (length === 2 || length === 3) {
   }
 
   array.sort();
-  console.log(array);
-  console.log(i);
   /*
     Because of how sorting works, NaN always comes after
     numbers. This for loop is to purge the array of all NaNs
