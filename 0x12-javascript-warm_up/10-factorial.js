@@ -8,8 +8,8 @@ if (isNaN(value)) {
   console.log(factorial(value));
 }
 
-function factorial(value) {
-  if (value < 0){
+function factorial (value) {
+  if (value < 0) {
     return -1;
   } else if (value === 0) {
     return 1;
