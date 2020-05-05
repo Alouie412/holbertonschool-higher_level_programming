@@ -20,8 +20,9 @@ if (length === 2 || length === 3) {
     Also length - 3. 1 because of how arrays are counted, and 2
     because of the execution of this file
   */
-  for (i = length - 3; isNaN(array[i]); i--)
+  for (i = length - 3; isNaN(array[i]); i--) {
     array.pop();
+  }
 
   // After purging all NaNs (if any), get rid of the largest value
   // because we want the 2nd largest value in the array
