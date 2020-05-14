@@ -24,7 +24,7 @@ Rectangle.prototype.double = function () {
 };
 
 Rectangle.prototype.rotate = function () {
-  let temp = this.height;
+  const temp = this.height;
   this.height = this.width;
   this.width = temp;
 };
